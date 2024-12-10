@@ -1,0 +1,35 @@
+/* EmptyTodos.css */
+
+.empty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)); /* Blanco transparente */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Borde negro sutil */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra negra sutil */
+    padding: 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.empty-message {
+    font-size: 20px;
+    color: #f1c40f; /* Amarillo brillante */
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.empty-container:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
+    border-color: #f1c40f; /* Amarillo al hacer hover */
+}
+
+.empty-message:hover {
+    color: #f39c12; /* Amarillo más intenso al hacer hover */
+}
