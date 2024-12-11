@@ -15,14 +15,17 @@ function TodoProvider({ children }){
       
       const [openModal, setOpenModal] = useState(false);
 
-      const completTodo	= (id) =>{
+      const completTodo = (id) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex(
-          ( todo )=> todo.id === id 
-        )
-        newTodos[todoIndex].completed = true;
-        saveTodos(newTodos);
-      }
+          (todo) => todo.id === id
+        );
+        if (todoIndex !== -1) {
+          newTodos[todoIndex].completed = true;
+          saveTodos(newTodos);
+        }
+      };
+    
     
       /**eliminar el To Do */
       const deleteTodo = (id) =>{
@@ -51,6 +54,7 @@ function TodoProvider({ children }){
       const addTodo = (text) => {
         const newTodos = [...todos];
         newTodos.push({
+          id: Date.now(),
           text,
           completed: false,
         })
