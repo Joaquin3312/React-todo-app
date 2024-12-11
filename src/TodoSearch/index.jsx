@@ -14,19 +14,4 @@ const TodoFetch =() =>{
   );
 }
 
-const CounterClick = ()=>{
-  let [clicked,setClicked] = useState(0);
-  
-  function manejarClick(){
-    setClicked(clicked++);
-  }
-
-  return(
-    <>
-      <p>aqui aparecen los clicks {clicked}</p>
-      <button type="button" 
-          onClick={manejarClick}>click</button>
-    </>
-  );
-}
-export { TodoFetch,CounterClick };
+export { TodoFetch };

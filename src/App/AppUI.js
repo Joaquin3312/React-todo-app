@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TodoCount } from '../TodoCounter';
-import { CounterClick, TodoFetch } from '../TodoSearch';
+import { TodoFetch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { ButtonTodo} from '../ButtonTodo';
 import { TodoItem } from '../TodoItem';
@@ -26,7 +26,6 @@ function AppUI(){
     <div className="container">
         <TodoCount />
         <TodoFetch />
-        <CounterClick />
         <TodoList >
             { loading && <TodosLoading /> }
             { error && <TodosError /> }
